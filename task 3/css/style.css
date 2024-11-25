@@ -1,0 +1,152 @@
+/* General Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+  }
+  
+  
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); 
+    z-index: -1; 
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9); 
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  } 
+
+  
+  /* Header Styling */
+  header {
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+  }
+  
+  /* Calculator Styling */
+  .calculator {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .display {
+    background: #1f2937;
+    color: white;
+    text-align: right;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .display input {
+    width: 100%;
+    font-size: 2.5rem;
+    border: none;
+    background: none;
+    color: white;
+    outline: none;
+    padding: 10px;
+  }
+  
+  /* Button Grid */
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 15px;
+    background-color: #f8fafc;
+  }
+  
+  /* Button Styling */
+  button {
+    padding: 20px;
+    font-size: 1.3rem;
+    background: #f3f4f6;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    background-color: #d1d5db;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    background-color: #9ca3af;
+    transform: translateY(2px);
+  }
+  
+  /* Special Buttons */
+  button:nth-child(16) {
+    background: #4b5563;
+    color: white;
+  }
+  
+  button:nth-child(16):hover {
+    background: #374151;
+  }
+  
+  button:nth-last-child(-n+4) {
+    background: #6366f1;
+    color: white;
+  }
+  
+  button:nth-last-child(-n+4):hover {
+    background: #4f46e5;
+  }
+  
+  /* Zero Button */
+  button.zero {
+    grid-column: span 2;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    button {
+      padding: 15px;
+      font-size: 1rem;
+    }
+  
+    .display input {
+      font-size: 2rem;
+    }
+  }
+  
